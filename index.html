@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/homework.png" />
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Task</title>
+  </head>
+  <body>
+    <div class="hero-box">
+      <div class="wrapper">
+        <div class="nav-container">
+          <div class="navbar-menu-toggle" onclick="toggleNavbarMenu()">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+          </div>
+          <ul class="navbar-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Food</a></li>
+            <li><a href="#">Restaurant</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+          <div class="Symbols">
+            
+            <span id="cart">
+              <img src="/images/shopping.png" alt=""
+            /></span>
+            <span></span>
+            <span id="phone"> <img src="/images/phone.png" alt="" /></span>
+          </div>
+        </div>
+
+        <div class="overlay">
+          <h1>LOREM IPSUM</h1>
+          <p>
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book.
+          </p>
+        </div>
+        <div class="hr-img"><img src="/images/img1.jpg" alt="" /></div>
+      </div>
+      <div class="main">
+        <div class="header">
+          <h1>Order Now</h1>
+        </div>
+        <div class="container">
+          <div class="card">
+            <img src="/images/img4.jpg" alt="Image 1" />
+            <h4>BURGER</h4>
+            <p>Lorem Ipsum has been the industry's standard dummy text</p>
+          </div>
+
+          <div class="card">
+            <img src="/images/img2.jpg" alt="Image 2" />
+            <h4>PIZZA</h4>
+            <p>Lorem Ipsum has been the industry's standard dummy text</p>
+          </div>
+
+          <div class="card">
+            <img src="/images/img3.jpg" alt="Image 3" />
+            <h4>PASTA</h4>
+            <p>Lorem Ipsum has been the industry's standard dummy text</p>
+          </div>
+        </div>
+        <button class="btn">Order</button>
+      </div>
+    </div>
+    <script>
+      const toggleButton = document.querySelector(".navbar-menu-toggle");
+      const navbarMenu = document.querySelector(".navbar-menu");
+      const cardOverlay = document.querySelector(".overlay");
+      const body = document.querySelector("body");
+
+      toggleButton.addEventListener("click", () => {
+        navbarMenu.classList.toggle("show");
+        body.classList.toggle("overflow-hidden");
+
+        if (navbarMenu.classList.contains("show")) {
+          cardOverlay.style.display = "none";
+        } else {
+          cardOverlay.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>
